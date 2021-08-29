@@ -1,0 +1,9 @@
+---
+name: Party Ticket
+description: >
+  <p>Komachi is going to invite Moe and Lulu to the party. But... she is shy and she encrypted the invitations. Nanado's secret mission is to decrypt these tickets so Komachi won't get lonely.</p>
+flag: "CakeCTF{710_i5_5m4r73r_7h4n_R4bin_4nd_H4574d}"
+author: theoldmoon0602
+tags:
+  - crypto
+is_survey: false

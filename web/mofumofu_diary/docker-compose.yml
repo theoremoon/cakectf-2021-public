@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mofumofu_diary:
+    build: .
+    working_dir: /var/www/html
+    container_name: mofumofu_diary
+    ports:
+      - "8003:80"
+    restart: always

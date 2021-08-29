@@ -1,0 +1,24 @@
+version: '3'
+services:
+  challenge:
+    build: ./challenge/web
+    ports:
+      - "8001:8080"
+    links:
+      - redis
+    environment:
+      - UWSGI_INI=/home/ctf/uwsgi.ini
+      - NGINX_MAX_UPLOAD=1m
+      - LISTEN_PORT=8080
+    restart: always
+  crawler:
+    build: ./challenge/crawler
+    links:
+      - challenge
+      - redis
+    environment:
+      - "flag=CakeCTF{CSP_1s_n0t_4_s1lv3r_bull3t!_bang!_bang!}"
+    restart: always
+  redis:
+    build: ./challenge/redis
+    restart: always

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title %}{% endblock %} - Travelog</title>
+
+        <link nonce="{{csp_nonce}}" rel="stylesheet"
+              href="/uikit.min.css" />
+        <script nonce="{{csp_nonce}}"
+                src="/uikit.min.js"></script>
+        <script nonce="{{csp_nonce}}"
+                src="/uikit-icons.min.js"></script>
+    </head>
+
+    <body>
+        {% if 'user_id' in session %}
+        <nav class="uk-navbar-container" uk-navbar>
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav">
+                    <li><a href="/list">Your Posts</a></li>
+                    <li><a href="/post">New Post</a></li>
+                </ul>
+            </div>
+        </nav>
+        {% endif %}
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

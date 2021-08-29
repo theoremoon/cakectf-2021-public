@@ -1,0 +1,11 @@
+version: '3'
+services:
+  rflag:
+    build:
+      context: .
+    working_dir: /home/pwn
+    container_name: rflag
+    ports:
+      - "10023:9999"
+    entrypoint: /etc/init.sh
+    restart: always

@@ -1,0 +1,9 @@
+---
+name: Hash browns
+description: >
+  Would you mind making the finest hash browns, chef?
+flag: "CakeCTF{(^o^)==(-p-)~~(=_=)~~~POTATOOOO~~~(^@^)++(-_-)**(^o-)_486512778b4}"
+author: yoshiking
+tags:
+    - reversing
+is_survey: false

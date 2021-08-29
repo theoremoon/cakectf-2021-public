@@ -1,0 +1,11 @@
+version: '3'
+services:
+  aldrya:
+    build:
+      context: .
+    working_dir: /home/ctf
+    container_name: aldrya
+    ports:
+      - "10029:9999"
+    entrypoint: /etc/init.sh
+    restart: always

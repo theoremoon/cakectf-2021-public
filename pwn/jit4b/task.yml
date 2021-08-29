@@ -1,0 +1,14 @@
+---
+name: JIT4b
+description: >
+  <p>Do you know how static analysis works in JIT speculation? I don't know.</p>
+  <code>nc {host} {port}</code>
+flag: "CakeCTF{1_th1nk_u_c4n_try_2_3xpl017_r34l_bug5_1n_br0ws3r}"
+author: ptr-yudai
+host: pwn.cakectf.com
+port: 9002
+tags:
+  - pwn
+is_survey: false
+main: jit4b
+local-port: 9999

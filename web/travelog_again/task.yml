@@ -1,0 +1,13 @@
+---
+name: travelog again
+description: >
+  <p>One more <a href="http://{host}:{port}/" target="_blank">travel</a>! :pleading_face:</p><code>$ 7z x travelog_again.7z</code> (The password is the flag of <code>travelog</code>)
+flag: "CakeCTF{I'll_n3v3r_trust_HTML:angry:}"
+author: ptr-yudai
+host: web.cakectf.com
+port: 8011
+tags:
+  - web
+is_survey: false
+main: challenge
+local-port: 8080

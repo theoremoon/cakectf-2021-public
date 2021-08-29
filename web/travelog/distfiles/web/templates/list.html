@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Posts{% endblock %}
+
+{% block content %}
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+    <h1>Your Posts</h1>
+    {% for post in posts %}
+    <div class="uk-card uk-card-default uk-card-hover">
+        <div class="uk-card-header">
+            <h3 class="uk-card-title">{{ post['title'] }}</h3>
+        </div>
+        <div class="uk-card-body">
+            {% if post['contents']|length < 100 %}
+            {{ post['contents'] }}
+            {% else %}
+            {{ post['contents'][:100] }}...
+            {% endif %}
+        </div>
+        <div class="uk-card-footer">
+            <a class="uk-button uk-button-text" href="/post/{{post['user_id']}}/{{post['post_id']}}">Read more</a>
+        </div>
+    </div>
+    {% endfor %}
+    {% if posts|length == 0 %}
+    <p class="uk-text-lead uk-text-muted">No posts found</p>
+    {% endif %}
+</div>
+{% endblock %}

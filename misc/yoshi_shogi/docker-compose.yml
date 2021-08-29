@@ -1,0 +1,8 @@
+version: '3'
+services:
+  yshogi:
+    build: .
+    ports:
+      - "15061:80"
+    entrypoint: /etc/init.sh
+    restart: always

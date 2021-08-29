@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post['title'] }}{% endblock %}
+
+{% block content %}
+<script nonce="{{ csp_nonce }}" src="https://www.google.com/recaptcha/api.js"></script>
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="uk-alert-{{ category }}" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>{{ message }}</p>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class="uk-margin">
+        <h1>{{ post['title'] }}</h1>
+        <p class="uk-text-small">Posted by {{ post['author'] }}</p>
+    </div>
+    <hr>
+
+    <div class="uk-container">
+        {{ post['contents'] | safe }}
+    </div>
+
+    <hr>
+    <div class="uk-grid-row" uk-grid>
+        <div>
+            <a href="#" class="uk-icon-button" uk-icon="copy" id="share" uk-tooltip="Copy URL to clipboard"></a>
+        </div>
+        <div class="uk-width-1-2@s">
+            <input class="uk-input" type="text" value="{{ url }}" id="url" readonly>
+        </div>
+        <form action="/report" method="POST" id="report">
+            <input type="text" value="/post/{{ post['user_id'] }}/{{ post['post_id'] }}" name="url" hidden readonly>
+            <button type="submit" class="uk-icon-button g-recaptcha"
+                    uk-icon="warning" uk-tooltip="Report sensitive content"
+                    data-sitekey="6LfFpMYaAAAAAAsjqi5QQvO7GPYU6zbdPR4BtgGj"
+                    data-callback="onSubmit"
+                    data-action="submit">
+            </button>
+        </form>
+    </div>
+    <script nonce="{{ csp_nonce }}" src="../../show_utils.js"></script>
+</div>
+{% endblock %}

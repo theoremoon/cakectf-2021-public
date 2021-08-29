@@ -1,0 +1,10 @@
+version: '3'
+services:
+  my_nyamber:
+    build: .
+    working_dir: /app
+    container_name: my_nyamber
+    tty: true
+    ports:
+      - "8002:8080"
+    entrypoint: "node ./server.js"

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Create New Post{% endblock %}
+
+{% block content %}
+<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
+    <h1>New Blog Post</h1>
+    <form method="POST" enctype="multipart/form-data" action="/post" name="post">
+        <fieldset class="uk-fieldset">
+            <legend class="uk-legend">Title</legend>
+            <div class="uk-margin">
+                <input class="uk-input" type="text" placeholder="Title of this post" name="title" required>
+            </div>
+            <legend class="uk-legend">Blog Contents</legend>
+            <div class="uk-margin">
+                <textarea class="uk-textarea" rows="16" placeholder="Write what you want to share :)" name="contents" required></textarea>
+                <ul uk-accordion>
+                    <li>
+                        <a class="uk-accordion-title uk-text-small uk-text-primary" href="#">Tips</a>
+                        <div class="uk-accordion-content">
+                            <p class="uk-text-small">
+                                You can use <code>{% raw %}{{ filename }}{% endraw %}</code> to embed the link of your image.<br>
+                                i.e. <code>&lt;img src="{% raw %}{{ cat.jpeg }}{% endraw %}"&gt;</code> expands to <code>&lt;img src="/uploads/05f5eb226a73311ab6702873ff044961/4d318a149f2a0887a79b6065d93ca64b/cat.jpeg"&gt;</code><br>
+                                Be noted that you can't use external resources due to security reason.
+                            </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-1-2@s">
+                    <legend class="uk-legend">Upload Images</legend>
+                    <div class="uk-margin">
+                        <div class="js-upload uk-placeholder uk-text-center">
+                            <span uk-icon="iccon: cloud-upload"></span>
+                            <span class="uk-text-middle">Upload images by dropping them here or</span>
+                            <div uk-form-custom>
+                                <input type="file" multiple>
+                                <span class="uk-link">selecting one</span>
+                            </div>
+                        </div>
+                        <progress id="progress" class="uk-progress" value="0" max="100" hidden></progress>
+                    </div>
+                    <p class="uk-text-small">Currently JPEG is supported.</p>
+                </div>
+                <div class="uk-width-1-2@s uk-inline uk-margin">
+                    <button class="uk-position-bottom-right uk-button uk-button-primary">Post</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <script nonce="{{ csp_nonce }}" src="./post_utils.js"></script>
+</div>
+{% endblock %}

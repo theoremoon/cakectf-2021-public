@@ -1,0 +1,13 @@
+---
+name: hwdbg
+description: >
+  <p>I found a setuid-ed binary at <code>/bin/hwdbg</code>. Although I thought it'd be useful for privilege escalation, I couldn't find any vulnerability in the program...</p>
+  <code>nc {host} {port}</code>
+flag: "CakeCTF{phys1c4l_4ddr3ss_1s_th3_m0st_h0n3st_4ddr3ss_083f63}"
+author: ptr-yudai
+host: others.cakectf.com
+port: 9005
+tags:
+  - pwn
+  - lunatic
+is_survey: false

@@ -1,0 +1,15 @@
+---
+name: UAF4b
+description: >
+  <p>You don't dare to try learning Use-after-Free?</p>
+  <code>nc {host} {port}</code>
+flag: "CakeCTF{U_pwn3d_full_pr0t3ct10n_b1n4ry!N0w_u_kn0w_h0w_d4ng3r0us_UAF_1s!_ea2e5f3e}"
+author: ptr-yudai
+host: pwn.cakectf.com
+port: 9001
+tags:
+  - pwn
+  - warmup
+is_survey: false
+main: uaf4b
+local-port: 9999

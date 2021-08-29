@@ -1,0 +1,14 @@
+version: '3'
+services:
+  uaf4b:
+    build:
+      context: .
+    working_dir: /home/pwn
+    container_name: uaf4b
+    ulimits:
+      nproc: 65535
+      core: 0
+    ports:
+      - "9001:9999"
+    entrypoint: /etc/init.sh
+    restart: always

@@ -1,0 +1,10 @@
+---
+name: nostrings
+description: >
+  <p>CTF / rev / warmup --&gt; strings</p>
+flag: "CakeCTF{th3_b357_p14c3_70_hid3_4_f14g_i5_in_4_f14g_f0r357}"
+author: theoremoon
+tags:
+  - warmup
+  - reversing
+is_survey: false

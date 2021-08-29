@@ -1,0 +1,9 @@
+---
+name: improvisation
+description: >
+  I tried improvisation on making an easy crypto challenge :P
+flag: "CakeCTF{d0n't_3xp3c7_s3cur17y_2_LSFR}"
+author: ptr-yudai
+tags:
+  - crypto
+is_survey: false

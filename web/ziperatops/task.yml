@@ -1,0 +1,13 @@
+---
+name: ziperatops
+description: >
+  <p><a href="http://{host}:{port}/" target="_blank">Zip Listing as a Service</a><br>* The flag is written in somewhere on the root directory of the machine.</p>
+flag: "CakeCTF{uNd3r5t4nd1Ng_4Nd_3xpl01t1Ng_f1l35y5t3m_cf1944}"
+author: ptr-yudai
+host: web.cakectf.com
+port: 8004
+tags:
+  - web
+is_survey: false
+main: ziperatops
+local-port: 80

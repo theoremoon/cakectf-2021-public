@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nginx:
+    container_name: telepathy
+    build:
+      context: ./challenge
+      dockerfile: Dockerfile.nginx
+    ports:
+      - 18100:80
+    depends_on:
+      - app
+
+  app:
+    build:
+      context: ./challenge
+      dockerfile: Dockerfile.app

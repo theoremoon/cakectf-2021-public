@@ -1,0 +1,11 @@
+---
+name: Yoshi-Shogi
+description: >
+  <p>Are you better at Shogi than yoshiking?</p>
+flag: "CakeCTF{https://www.nicovideo.jp/watch/sm19221643}"
+author: ptr-yudai
+host: misc.cakectf.com
+port: 15061
+tags:
+  - cheat
+is_survey: false

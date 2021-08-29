@@ -1,0 +1,13 @@
+---
+name: My Nyamber
+description: >
+  <p>The cat country, Nyapan, started introducing <a href="http://{host}:{port}/" target="_blank">The Social Security and Tax Nyamber System</a> (a.k.a My Nyamber). They also run a bug bounty where you can earn some Matatabi Cat Sticks as reward.</p>
+flag: "CakeCTF{BUG-REPORT-ACCEPTED:Reward=222-Matatabi-Sticks}"
+author: ptr-yudai
+host: web.cakectf.com
+port: 8002
+tags:
+  - web
+is_survey: false
+main: my_nyamber
+local-port: 8080

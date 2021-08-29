@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ziperatops:
+    build: .
+    working_dir: /var/www/html
+    container_name: ziperatops
+    ports:
+      - "8004:80"
+    restart: always

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My Nyamber</title>
+    </head>
+
+    <body>
+        <!-- Header -->
+        <h1>My Nyamber Lookup</h1>
+        <p>
+            Enter your My Nyamber to see your personyal information.<br>
+            <b>※Never show your My Nyamber to untrusted organization or person.</b>
+        </p>
+        <hr>
+
+        <!-- Query form -->
+        <p>Fill either of the following information:</p>
+        <script src="/query.js"></script>
+        <div>
+            <!-- [TODO] Support multi-query -->
+            <label for="nid">My Nyamber: </label>
+            <input type="password" id="nid" placeholder="12345678">
+            <br>
+            <label for="name">Name: </label>
+            <input type="text" id="name" placeholder="Nyantaro">
+            <br>
+            <button onclick="query();">Query</button>
+        </div>
+
+        <!-- Query result -->
+        <div id="result" style="margin: 16px;">
+        </div>
+
+        <!-- Footer -->
+        <hr>
+        <p>© 2021 Ministry of Internyal Affairs and Nommunications All Rights Reserved.</p>
+    </body>
+</html>

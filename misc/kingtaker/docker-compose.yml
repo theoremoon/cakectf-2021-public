@@ -1,0 +1,8 @@
+version: '3'
+services:
+  challenge:
+    build: .
+    ports:
+      - "10311:80"
+    restart: always
+    entrypoint: /etc/init.sh

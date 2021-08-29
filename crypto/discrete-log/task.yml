@@ -1,0 +1,10 @@
+---
+name: discrete log
+description: >
+  People conclude discrete log is hard problem up to now.
+flag: "CakeCTF{ba37a0f409ef3ec23a6cffbc474a1cef}"
+author: theoldmoon0602
+tags:
+    - crypto
+    - warmup
+is_survey: false

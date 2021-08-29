@@ -1,0 +1,14 @@
+---
+name: rflag
+description: >
+  <p>CTFer is good at guessing something, right?</p>
+  <code>nc {host} {port}</code>
+flag: "CakeCTF{n0b0dy_w4nt5_2_r3v3r53_RUST_pr0gr4m}"
+author: ptr-yudai
+host: misc.cakectf.com
+port: 10023
+tags:
+    - reversing
+is_survey: false
+main: rflag
+local-port: 9999

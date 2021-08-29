@@ -1,0 +1,14 @@
+---
+name: ALDRYA
+description: >
+  <p>I'm scared of executing a malicious ELF file. That's why I invented this new ELF-verify system named ALDRYA.</p>
+  <code>nc {host} {port}</code>
+flag: "CakeCTF{jUst_cH3ck_SHA256sum_4nd_7h47's_f1n3}"
+author: ptr-yudai
+host: misc.cakectf.com
+port: 10029
+tags:
+    - reversing
+is_survey: false
+main: aldrya
+local-port: 9999

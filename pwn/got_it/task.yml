@@ -1,0 +1,14 @@
+---
+name: "GOT it"
+description: >
+  <p>Does "Full RELRO" mean it's really secure against GOT overwrite?</p>
+  <code>nc {host} {port}</code>
+flag: "CakeCTF{*ABS*+0x190717@IGOTIT}"
+author: ptr-yudai
+host: pwn.cakectf.com
+port: 9003
+tags:
+  - pwn
+is_survey: false
+main: gotit
+local-port: 9999

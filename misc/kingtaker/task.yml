@@ -1,0 +1,11 @@
+---
+name: Kingtaker
+description: >
+  <p><a href="http://{host}:{port}/" target="_blank">Kingtaker</a> is a short game about a sharply depressed king.</p>
+flag: "CakeCTF{M4yb3_I_c4n_s3rv3_U_inst34d?}"
+author: ptr-yudai
+host: misc.cakectf.com
+port: 10311
+tags:
+  - cheat
+is_survey: false

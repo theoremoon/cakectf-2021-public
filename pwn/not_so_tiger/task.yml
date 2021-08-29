@@ -1,0 +1,14 @@
+---
+name: "Not So Tiger"
+description: >
+  <p>Bengal, Ocicat, Ocelot, and Savannah Cat look similar.</p>
+  <code>nc {host} {port}</code>
+flag: "CakeCTF{c4n_U_d15t1ngu15h_b3tw33n_th353_c4t_5p3c13s?}"
+author: ptr-yudai
+host: pwn.cakectf.com
+port: 9004
+tags:
+  - pwn
+is_survey: false
+main: not_so_tiger
+local-port: 9999

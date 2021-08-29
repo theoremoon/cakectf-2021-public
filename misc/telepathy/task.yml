@@ -1,0 +1,13 @@
+---
+name: telepathy
+description: >
+  <p>HTTP is no longer required. It's time to use telepathy to communicate more securely and quickly. Here is my PoC: <a href="http://{host}:{port}/" target="_blank">http://{host}:{port}</a></p>
+flag: "CakeCTF{r4ng3-0r4ng3-r4ng3}"
+author: theoldmoon0602
+host: misc.cakectf.com
+port: 18100
+tags:
+  - misc
+is_survey: false
+main: nginx
+local-port: 80

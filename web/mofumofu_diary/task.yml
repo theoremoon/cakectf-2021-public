@@ -1,0 +1,14 @@
+---
+name: MofuMofu Diary
+description: >
+  <p><a href="http://{host}:{port}/" target="_blank">Would you like to see some mofu-mofu pictures?</a><br>* The flag is located at <code>/flag.txt</code></p>
+flag: "CakeCTF{4n1m4ls_4r3_h0n3st_unl1k3_hum4ns_6e081a}"
+author: ptr-yudai
+host: web.cakectf.com
+port: 8003
+tags:
+  - web
+  - warmup
+is_survey: false
+main: mofumofu_diary
+local-port: 80

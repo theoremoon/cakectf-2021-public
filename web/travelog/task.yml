@@ -1,0 +1,13 @@
+---
+name: travelog
+description: >
+  <p>I'll travel all over the world and make some blog posts <a href="http://{host}:{port}/" target="_blank">here</a> after the pandemic is over.<br>Just someone named CSP? is protecting us!</p>
+flag: "CakeCTF{CSP_1s_n0t_4_s1lv3r_bull3t!_bang!_bang!}"
+author: ptr-yudai
+host: web.cakectf.com
+port: 8001
+tags:
+  - web
+is_survey: false
+main: challenge
+local-port: 8080

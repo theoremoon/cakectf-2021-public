@@ -1,0 +1,15 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: ./challenge
+      dockerfile: Dockerfile.nginx
+    ports:
+      - 8100:80
+    depends_on:
+      - app
+
+  app:
+    build:
+      context: ./challenge
+      dockerfile: Dockerfile.app
