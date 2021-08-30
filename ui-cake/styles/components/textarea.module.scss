@@ -1,0 +1,13 @@
+@import "@/styles/variables.scss";
+
+.textarea {
+    display: block;
+    resize: vertical;
+    border: 2px solid $color-pink;
+    border-radius: 4px;
+    font-size: 1.1rem;
+
+    &:focus {
+        outline: none;
+    }
+}

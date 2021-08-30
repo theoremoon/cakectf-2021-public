@@ -1,0 +1,9 @@
+@import "@/styles/variables.scss";
+
+@mixin tag {
+    display: inline-block;
+    border: 1px solid $color-pink;
+    padding: 0.1rem 0.5rem;
+    border-radius: 2px;
+    background: rgba($color-pink, 0.1);
+}

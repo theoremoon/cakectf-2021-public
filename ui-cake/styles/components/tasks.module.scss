@@ -1,0 +1,5 @@
+.tasks {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, 12rem);
+}

@@ -1,0 +1,85 @@
+@import "@/styles/variables.scss";
+@import "@/styles/parts.scss";
+
+.task {
+    display: block;
+    aspect-ratio: 1;
+    background-color: $color-brown;
+    border-radius: 5px;
+
+    text-decoration: none;
+    color: $color-dark-brown;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(0.9);
+        transition: transform 0.1s ease-in-out;
+    }
+
+    .task-cover {
+        background-image: url("./cake-head.svg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        height: 100%;
+    }
+    &-solved {
+        background-color: $color-pink;
+
+        .task-cover {
+            border-radius: 5px;
+            background-image: url("./cake-head-fill.svg");
+        }
+
+        .task-name {
+            color: $color-white;
+        }
+    }
+
+
+    .task-upper {
+        height: 40%;
+
+        .task-name {
+            font-size: 1.3rem;
+            word-break: break-all;
+    
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+
+    .task-middle {
+        height: 40%;
+        .task-score {
+            padding-top: 10%;
+            font-size: 2rem;
+            text-align: center;
+        }
+    }
+
+
+    .task-lower {
+        height: 20%;
+        position: relative;
+    }
+    .task-tags {
+        position: absolute;
+        bottom: 0.5em;
+        left: 0.5em;
+        max-width: 50%;
+        
+        .task-tag {
+            @include tag;
+            margin: 1px;
+            background-color: $color-white;
+            border: none;
+        }
+    }
+    .task-solves {
+        display: inline-block;
+        padding: 0.1em 0;
+        position: absolute;
+        right: 1em;
+        bottom: 0.5em;
+    }
+}

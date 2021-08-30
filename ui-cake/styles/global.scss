@@ -1,0 +1,46 @@
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html,body {
+    margin: 0;
+    padding: 0;
+    background-color: $color-white;
+    color: $color-black;
+}
+div,span,a,p {
+    font-family: roboto;
+}
+#container {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+#main {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    max-width: 1280px;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* nprogress */
+#nprogress .bar {
+    background:  $color-pink !important;
+}
+
+#nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px $color-pink, 0 0 5px $color-pink;
+    opacity: 1.0;
+  
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+        -ms-transform: rotate(3deg) translate(0px, -4px);
+            transform: rotate(3deg) translate(0px, -4px);
+  }

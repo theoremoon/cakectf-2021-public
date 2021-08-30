@@ -1,0 +1,33 @@
+@import "@/styles/variables.scss";
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+
+    background-color: #ffffff;
+    border: 1px solid $color-pink;
+    border-radius: 4px;
+
+    select {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        background-color: transparent;
+        border-color: $color-pink;
+    }
+}
+
+.formitem {
+    margin-bottom: 2rem;
+
+    label {
+        display: block;
+        font-size: 0.9rem;
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+

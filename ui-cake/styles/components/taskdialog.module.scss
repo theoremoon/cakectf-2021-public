@@ -1,0 +1,63 @@
+@import "@/styles/variables.scss";
+@import "@/styles/parts.scss";
+
+.dialog-head {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.dialog-tags {
+    padding-bottom: 1rem;
+    .dialog-tag {
+        @include tag;
+    }
+}
+.dialog-description {}
+.dialog-attachments {
+    a {
+        color: $color-black;
+
+        display: inline-block;
+        border: 2px solid $color-pink;
+        border-radius: 4px;
+        text-decoration: none;
+        padding: 0.25em 0.5em;
+
+        &:hover {
+            background-color: rgba($color-pink, 0.2);
+        }
+    }
+}
+.dialog-author {
+    text-align: right;
+}
+
+.dialog {
+    display: flex;
+}
+.dialog-left {
+    width: 75%;
+}
+.dialog-right {
+    width: 25%;
+    overflow-y: auto;
+    .dialog-right-inner {
+        height: 0;
+    }
+}
+.dialog-solvenum {
+    font-size: 1.1rem;
+}
+.dialog-solves {
+    overflow-x: hidden;
+    div {
+        padding-left: 1rem;
+    }
+}
+.dialog-solve-team {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    a {
+        color: inherit;
+    }
+}

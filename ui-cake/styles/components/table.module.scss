@@ -1,0 +1,23 @@
+@import '@/styles/variables.scss';
+
+.table {
+    border: 2px solid $color-pink;
+    margin: 1em auto;
+    border-collapse: collapse;
+
+    tr:hover {
+        background-color: rgba($color-pink, 0.1);
+    }
+    
+    th, td {
+        border-bottom: 1px solid $color-pink;
+        padding: 0 1em;
+    }
+
+    .name, pre {
+        max-width: 10em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

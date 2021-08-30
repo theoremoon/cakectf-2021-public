@@ -1,0 +1,72 @@
+@import "@/styles/variables.scss";
+
+$border-style: 2px dashed $color-dark-brown;
+
+.ranking-table {
+  display: table;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  tbody {
+    tr {
+      border-bottom: $border-style;
+      line-height: 1.3em;
+      &:first-child {
+        border-top: $border-style;
+      }
+    }
+    td {
+      border-right: $border-style;
+      &:first-child {
+        border-left: $border-style;
+      }
+    }
+  }
+
+  .my-team {
+    background-color: rgba($color-pink, 0.2);
+  }
+
+  .task-name {
+    white-space: pre;
+    position: relative;
+    border-right: none;
+    div {
+      position: absolute;
+      transform-origin: left;
+      transform: translate(0.5em, -0.5em) rotate(-30deg);
+    }
+  }
+
+  .team-pos {
+    text-align: center;
+  }
+
+  .team-country {
+    text-align: center;
+    font-size: 1.25em;
+  }
+
+  .team-score {
+    text-align: center;
+  }
+
+  .team-name {
+    max-width: 10em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0.25em;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .team-solve-flag {
+    text-align: center;
+    width: 1.5em;
+  }
+}

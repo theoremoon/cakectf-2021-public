@@ -1,0 +1,19 @@
+@import "@/styles/variables.scss";
+
+.text {
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $color-pink;
+  display: inline-block;
+  margin: 0.25rem;
+  padding: 0.25rem 0;
+  margin-bottom: 1px;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $color-pink;
+    margin-bottom: 0px;
+  }
+}

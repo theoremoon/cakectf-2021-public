@@ -1,0 +1,14 @@
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.form {
+    label {
+        display: inline-block;
+        min-width: 120px;
+    }
+
+    &>div {
+        margin-bottom: 1rem;
+    }
+}

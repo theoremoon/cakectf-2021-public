@@ -1,0 +1,24 @@
+@import "@/styles/variables.scss";
+
+.messagecontainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.messagebox {
+    width: 200px;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border: 2px solid $color-pink;
+    border-radius: 4px;
+    background-color: rgba(#ffffff, 0.9);
+    margin-bottom: 0.5rem;
+
+    animation: slidein 0.2s ease-out;
+}
+
+@keyframes slidein {
+    0% {left: 200px; }
+    100% { left: 0; }
+}

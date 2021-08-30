@@ -1,0 +1,54 @@
+@import "@/styles/variables.scss";
+
+.nav {
+    width: 100%;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        list-style: none;
+
+        li {
+            flex: 1;
+
+            a { 
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                height: 3rem;
+                line-height: 3rem;
+                color: inherit;
+                font-size: 1.25rem;
+                padding-bottom: 2px;
+
+                background-image: linear-gradient($color-pink);
+                background-size: 0 2px, auto;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                transition: all .2s ease-out;
+
+                &.active {
+                    background-size: 100% 2px, auto;
+
+                    &:before {
+                        content: '🍓';
+                    }
+                }
+            }
+        }
+
+        // 他の要素が選択されているときactiveであってもunderlineない
+        &:hover {
+            a {
+                &.active {
+                    background-size: 0 2px, auto;
+                }
+                &:hover {
+                    background-size: 100% 2px, auto;
+                }
+            }            
+        }
+    }
+}
+
