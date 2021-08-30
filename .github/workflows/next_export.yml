@@ -1,0 +1,37 @@
+name: scoreserver deploy
+
+on:
+  push:
+    branches: [ scoreserver ]
+  pull_request:
+    branches: [ scoreserver ]
+
+jobs:
+  build:
+    working-directory: ./ui-cake
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+
+      - name: yarn install
+        run: yarn
+
+      - name: build
+        run: yarn build
+        
+      - name: export
+        if: github.event_name == 'push'
+        run: yarn export
+
+      - name: publish
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./ui-cake/out
