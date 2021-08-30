@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-    working-directory: ./ui-cake
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -21,13 +20,16 @@ jobs:
 
       - name: yarn install
         run: yarn
+        working-directory: ./ui-cake
 
       - name: build
         run: yarn build
+        working-directory: ./ui-cake
         
       - name: export
         if: github.event_name == 'push'
         run: yarn export
+        working-directory: ./ui-cake
 
       - name: publish
         if: github.event_name == 'push'
