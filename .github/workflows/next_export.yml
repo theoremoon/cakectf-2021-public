@@ -31,6 +31,11 @@ jobs:
         run: yarn export
         working-directory: ./ui-cake
 
+      - name: nojekyll
+        if: github.event_name == 'push'
+        run: touch ./out/.nojekyll
+        working-directory: ./ui-cake
+
       - name: publish
         if: github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v3
